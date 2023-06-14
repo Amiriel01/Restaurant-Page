@@ -36,20 +36,21 @@ function createHome() {
     //creates a class div for hours-location//
     let hoursLocationDiv = document.createElement("div");
     hoursLocationDiv.classList.add("hours-location");
+    //attaches hourLocationDiv to the content div//
+    content.appendChild(hoursLocationDiv);
 
     //creates a class div for week-hours within the hours-location div//
     let weekHoursDiv = document.createElement("div");
     weekHoursDiv.classList.add("week-hours");
     //attaches weekHoursDiv to the hoursLocationDiv//
     hoursLocationDiv.appendChild(weekHoursDiv);
-    content.appendChild(hoursLocationDiv);
 
     //creates a class div for location within the hours-location div//
     let locationDiv = document.createElement("div");
     locationDiv.classList.add("location");
     //attaches location to the hoursLocationDiv//
     hoursLocationDiv.appendChild(locationDiv);
-    content.appendChild(hoursLocationDiv);
+    
 
     //create id divs for the weekHoursDiv//
     //creates an id for hours//
@@ -93,34 +94,41 @@ function createHome() {
     weekHoursDiv.appendChild(friday);
     weekHoursDiv.appendChild(saturday);
     weekHoursDiv.appendChild(sunday);
-    content.appendChild(weekHoursDiv);
-
-    
 
     //creates an id div for locationTitle//
     let locationTitle = document.createElement("div");
     locationTitle.id = "location-title";
     locationTitle.innerText = "Location";
-
+    
     //attaches the locationTitle id to the location class div//
     locationDiv.appendChild(locationTitle);
-    content.appendChild(locationDiv);
 
     //add class address to the location class div//
     let address = document.createElement("div");
     address.classList.add("address");
     //attaches location to the hoursLocationDiv//
     locationDiv.appendChild(address);
-    content.appendChild(locationDiv);
 
     //creates the street div//
     let street = document.createElement("div");
-    street.id ="street";
+    street.id = "street";
     street.innerText = "555 Macaron Dr.";
+
+    //creates the town/state div//
+    let townState = document.createElement("div");
+    townState.id = "town-state";
+    townState.innerText = "Macaron City, MC";
+
+    //creates location image div//
+    let locationImage = document.createElement("img");
+    locationImage.id = "location-image";
+    locationImage.setAttribute("src", "images/location.png");
 
     //attaches the street to the location class div//
     address.appendChild(street);
-    content.appendChild(address);
+    address.appendChild(townState);
+    address.appendChild(locationImage);
+
 }
 module.exports = {
     createHome
