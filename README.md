@@ -15,3 +15,8 @@ Credits
     e. Dark Chocolate: Diana Light
     f. Elderberry Vine: Cottonbro Studio
     g. Ripe Raspberry: Anna Pyshniuk
+
+3. Baker images found on Unsplash.com
+    Creator List:
+    a. Baker One: Sincerely Media
+    b. Baker Two: Bank Phrom

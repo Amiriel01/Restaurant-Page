@@ -127,7 +127,8 @@ button {
 }
 
 .macaron-container,
-.drink-menu-container {
+.drink-menu-container,
+.baker-container {
     border: 1rem solid rosybrown;
     margin-top: 1rem;
     background-color: rgb(230, 242, 243);
@@ -136,7 +137,8 @@ button {
 }
 
 #macaron-flavors-title,
-#drink-menu-title  {
+#drink-menu-title,
+.bakers  {
     color: rgb(24, 148, 144);
     margin-bottom: .5rem;
     font-size: 64px;
@@ -170,6 +172,14 @@ button {
     margin-top: 2rem;
 }
 
+.baker1,
+.baker2 {
+    display: flex;
+    border: .25rem solid rgb(24, 148, 144);
+    width: 40rem;
+    margin-top: 2rem;
+}
+
 #lemon-img,
 #blackberry-img,
 #weddingcake-img,
@@ -184,6 +194,13 @@ button {
     width: 11.25rem;
 }
 
+#baker1-img,
+#baker2-img {
+    height: 300px;
+    border-right: .25rem solid rgb(24, 148, 144);
+    width: 25rem;
+}
+
 #lemon-name,
 #blackberry-name,
 #weddingcake-name,
@@ -195,13 +212,20 @@ button {
 #raspberry-name,
 #coffee-title,
 #fruit-title,
-#tea-title {
+#tea-title,
+#baker1-name,
+#baker2-name {
     color: rgb(24, 148, 144);
     margin-bottom: .5rem;
     font-size: 24px;
     text-align: center; 
     font-weight: bold;
     margin-top: .5rem;
+}
+
+#baker1-name,
+#baker2-name {
+    margin-top: 2rem;
 }
 
 #lemon-info,
@@ -213,11 +237,19 @@ button {
 #strawberry-info,
 #elderberry-info,
 #raspberry-info,
-ul {
+ul,
+#baker1-bio,
+#baker2-bio {
     color: rgb(24, 148, 144);
     margin-top: 1rem;
     font-size: 24px;
     margin-left: .25rem;
+}
+
+#baker1-bio,
+#baker2-bio {
+    margin-top: 2rem;
+    
 }
 
 .drink-lists {
@@ -232,4 +264,35 @@ ul {
 #tea-title {
     text-decoration: underline;
     color: rgb(24, 148, 144);
+}
+
+.baker-bios  {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    color: rgb(24, 148, 144);
+    background-color: rgb(230, 242, 243);
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 2rem;
+    border: .5rem solid rosybrown;
+    width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#contacti-title {
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    font-size: 48px;
+}
+
+#phone,
+#email,
+#social-media {
+    margin-bottom: 1rem;
 }
