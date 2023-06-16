@@ -1,8 +1,39 @@
 # Resturant-Page
-Work in Progress
 
+**Objective**
 
-Credits
+I created a three page restaurant website using JavaScript, HTML, JSON, Webpack, and CSS. The webpage is for a fictional restaurant and has a Home, Menu, and Contact page.
+
+***Completed Website Images***
+
+Home:
+![](dist/images/completed1.png)
+![](dist/images/completed2.png)
+
+Menu:
+![](dist/images/completed3.png)
+![](dist/images/completed4.png)
+
+Contact:
+![](dist/images/completed5.png)
+![](dist/images/completed6.png)
+
+***Features***
+1. Home Page:
+   
+   a. The Home page features the bakery name with background image, two paragraphs of text about the resturant, the hours and location of the bakery.
+   
+3. Menu Page:
+   
+   a. I used a function to create the menu cards instead of creating the cards one by one.
+   
+5. Contact Page:
+   
+   a. The Contact Page features two fictional bakers and contact information for the store.
+   
+7. The tabs at the top work of a function that clears each page and then shows the new content.
+
+***Credits***
 
 1. The "Home" page image was found on pexels.com. Creator Ylanite Koppens.
 
