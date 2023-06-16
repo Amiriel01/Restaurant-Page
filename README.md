@@ -1,6 +1,6 @@
 # Restaurant-Page
 
-**Objective:**
+**Objective**
 
 I created a three page restaurant website using JavaScript, HTML, JSON, Webpack, and CSS. The webpage is for a fictional restaurant and has a Home, Menu, and Contact page.
 
