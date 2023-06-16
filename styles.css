@@ -22,11 +22,26 @@ body {
 
 button {
     padding: 1rem;
-    background-color: rosybrown;
+    background-color: rgb(230, 242, 243);
     font-size: 24px;
     font-weight: bold;
     color: rgb(142, 69, 69);
-    
+    border-top: 2px solid rgb(24, 148, 144);
+    border-left: 2px solid rgb(24, 148, 144);
+    border-right: 2px solid rgb(24, 148, 144);
+    cursor: pointer;
+}
+
+button:hover {
+    margin-top: -20px
+}
+
+button:active {
+    background-color: rgb(24, 148, 144);
+    color: rgb(230, 242, 243);
+    border-top: 5px solid rosybrown;
+    border-left: 5px solid rosybrown;
+    border-right: 5px solid rosybrown;
 }
 
 .title-space {
@@ -82,6 +97,7 @@ button {
     align-items: center;
     border: .5rem solid rosybrown;  
     text-align: center;
+    background-color: rgb(230, 242, 243);
 }
 
 #hour-title,
@@ -138,7 +154,7 @@ button {
 
 #macaron-flavors-title,
 #drink-menu-title,
-.bakers  {
+#baker-title  {
     color: rgb(24, 148, 144);
     margin-bottom: .5rem;
     font-size: 64px;
@@ -155,7 +171,7 @@ button {
     text-align: center;
 }
 
-.macaron-row1,
+.macaron-row,
 .macaron-row2,
 .macaron-row3 {
     display: flex;
@@ -165,6 +181,7 @@ button {
 .macaron-row3 {
     margin-bottom: 1rem;
 }
+
 .macaron-cards {
     display: flex;
     border: .25rem solid rgb(24, 148, 144);
@@ -180,15 +197,7 @@ button {
     margin-top: 2rem;
 }
 
-#lemon-img,
-#blackberry-img,
-#weddingcake-img,
-#whitechoc-img,
-#milkchoc-img,
-#darkchoc-img,
-#strawberry-img,
-#elderberry-img,
-#raspberry-img {
+.card-image {
     height: 200px;
     border-right: .25rem solid rgb(24, 148, 144);
     width: 11.25rem;
@@ -201,18 +210,8 @@ button {
     width: 25rem;
 }
 
-#lemon-name,
-#blackberry-name,
-#weddingcake-name,
-#whitechoc-name,
-#milkchoc-name,
-#darkchoc-name,
-#strawberry-name,
-#elderberry-name,
-#raspberry-name,
-#coffee-title,
-#fruit-title,
-#tea-title,
+.card-name,
+#drink-type,
 #baker1-name,
 #baker2-name {
     color: rgb(24, 148, 144);
@@ -223,20 +222,17 @@ button {
     margin-top: .5rem;
 }
 
+#drink-type {
+    text-decoration: underline;
+    color: rgb(24, 148, 144);
+}
+
 #baker1-name,
 #baker2-name {
     margin-top: 2rem;
 }
 
-#lemon-info,
-#blackberry-info,
-#weddingcake-info,
-#whitechoc-info,
-#milkchoc-info,
-#darkchoc-info,
-#strawberry-info,
-#elderberry-info,
-#raspberry-info,
+.card-info,
 ul,
 #baker1-bio,
 #baker2-bio {
@@ -244,6 +240,7 @@ ul,
     margin-top: 1rem;
     font-size: 24px;
     margin-left: .25rem;
+    text-decoration: none;
 }
 
 #baker1-bio,
@@ -283,9 +280,10 @@ ul,
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    margin-bottom: 5rem;
 }
 
-#contacti-title {
+#contact-title {
     margin-bottom: 1rem;
     text-decoration: underline;
     font-size: 48px;
@@ -295,4 +293,10 @@ ul,
 #email,
 #social-media {
     margin-bottom: 1rem;
+}
+
+.drink-list-title {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
