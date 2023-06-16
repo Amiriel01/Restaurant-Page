@@ -1,4 +1,4 @@
-# Resturant-Page
+# Restaurant-Page
 
 **Objective**
 
