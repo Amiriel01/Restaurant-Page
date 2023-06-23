@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/styles.css">
+</head>
+
+<body>
+    <div class="sign-up-title-container">
+        <div id="sign-up-title">
+            See you Next Time!
+        </div>
+        <div id="sign-up-info">
+            Don't forget to sign-up to recieve our seasonal newsletter which features scheduled events, quarterly menu
+            items, and macaron and drink
+            coupons!!
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="form-row">
+            <div id="form-name">
+                <label for="full-name">First and Last Name</label>
+                <input type="text" name="full-name" id="full-name" maxlength="20">
+            </div>
+            <div id="email">
+                <div id="email">
+                    <label for="form-email">Email Address</label>
+                    <input type="email" name="form-email" id="form-email">
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div id="phone">
+                <label for="form-phone-number">Phone Number</label>
+                <input type="tel" id="form-phone-number" name="form-phone-number">
+            </div>
+            <div id="zip-code">
+                <div id="form-zip-code">
+                    <label for="form-zip-code">Zip Code</label>
+                    <input type="text" name="form-zip-code" id="form-zip-code" pattern="[0-9]*" maxlength="5">
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div id="password">
+                <lable for="form-password">Password</lable>
+                <input type="password" id="form-password" name="form-password"
+                    title="Password must be at least five characters long." minlength="5">
+            </div>
+            <div id="password2">
+                <div id="password2">
+                    <label for="form-password2">Confirm Password</label>
+                    <input type="password" id="form-password2" name="form-password2"
+                        title="Password must be at least five characters long." minlength="5">
+                    <span id="password-message"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div id="sign-up-button-container">
+                <button id="sign-up-button">Sign-Up</button>
+            </div>
+        </div>
+
+</body>
+
+</html>

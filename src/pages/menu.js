@@ -152,8 +152,6 @@ function createMenu() {
         ul3.appendChild(li3);
     }
     drinkListTitle3.appendChild(ul3);
-
- /*drinksListTitle.appendChild(createDrinkLists("Coffee Concoctions, ["Maple Iced Coffee", "Iced Pistachio Rose Latte", "Irish Cream Cold Brew", "Green Tea Frappuccino"]))*/
 }
 
 //this function will create the cards//
@@ -192,28 +190,6 @@ function createCard(img, name, info) {
 
     return macaronCard;
 }
-
-/*//function to create the drinks lists//
-function createDrinkLists(type, drinks) {
-    //this will create the drink type div//
-    let drinkType = document.createElement("div");
-    drinkType.classList.add("drink-type");
-    drinkType.innerText = type
-    drinkListTitle.appendChild(drinkType);
-
-    //this will add the unordered list//
-    let drinkArray = ["a", "a", "a", "a"];
-    let ul = document.createElement("ul");
-
-    for (let drinks of drinkArray) {
-        let li = document.createElement("li");
-        li.innerText = drinks;
-        ul.appendChild(li);
-    }
-    drinkListTitle.appendChild(ul);
-
-    return drinkType, drinkAray;
-}*/
 
 module.exports = {
     createMenu
