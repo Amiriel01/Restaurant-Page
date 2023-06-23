@@ -139,12 +139,14 @@ button:active {
 				  1px 1px 0 whitesmoke,
 				 1px -1px 0 whitesmoke;
     text-decoration: underline;
-    text-decoration-color: rgb(161, 85, 85)
+    text-decoration-color: rgb(161, 85, 85);
 }
 
 .macaron-container,
 .drink-menu-container,
-.baker-container {
+.baker-container,
+.sign-up-title-container,
+.form-container {
     border: 1rem solid rosybrown;
     margin-top: 1rem;
     background-color: rgb(230, 242, 243);
@@ -154,7 +156,8 @@ button:active {
 
 #macaron-flavors-title,
 #drink-menu-title,
-#baker-title  {
+#baker-title,
+#sign-up-title  {
     color: rgb(24, 148, 144);
     margin-bottom: .5rem;
     font-size: 64px;
@@ -164,7 +167,8 @@ button:active {
 }
 
 #macaron-allergy-info,
-#drink-menu-info {
+#drink-menu-info,
+#sign-up-info {
     color: rgb(24, 148, 144);
     margin-bottom: .5rem;
     font-size: 36px;
@@ -300,3 +304,34 @@ ul,
     justify-content: space-around;
     flex-direction: column;
 }
+
+#sign-up-info {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 24px;
+    color: rgb(24, 148, 144);
+}
+
+input,
+label {
+    display: block;
+}
+
+input {
+    font-size: 24px;
+    color: rgb(161, 85, 85);
+    padding: .25rem;
+}
+
+#sign-up-button {
+    border-bottom: 2px solid rgb(24, 148, 144);
+}
+
