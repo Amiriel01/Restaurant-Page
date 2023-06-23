@@ -32,7 +32,10 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+#home:hover,
+#menu:hover,
+#contact:hover,
+#sign-up:hover {
     margin-top: -20px
 }
 
@@ -305,9 +308,29 @@ ul,
     flex-direction: column;
 }
 
+.sign-up-title-container {
+    width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #sign-up-info {
     margin-top: 2rem;
     margin-bottom: 1rem;
+}
+
+.form-container {
+    width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#coffee {
+    width: 25rem;
+    height: 25rem;
+    border-right: 1rem solid rosybrown;
 }
 
 .form-row {
@@ -316,6 +339,7 @@ ul,
     justify-content: space-around;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    margin-right: 1rem;
     font-size: 24px;
     color: rgb(24, 148, 144);
 }
@@ -323,15 +347,31 @@ ul,
 input,
 label {
     display: block;
+    margin-right: 2rem;
 }
 
 input {
     font-size: 24px;
     color: rgb(161, 85, 85);
     padding: .25rem;
+    
 }
 
 #sign-up-button {
     border-bottom: 2px solid rgb(24, 148, 144);
+    margin-right: 3rem;
 }
 
+#sign-up-button:hover {
+    transform: scale(1.2);
+}
+
+#sign-up-button:active {
+    border-bottom: 5px solid rosybrown;
+}
+
+span {
+    color: purple;
+    font-size: 14px;
+    font-weight: bold;
+}
