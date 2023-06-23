@@ -28,6 +28,12 @@ function createMenu() {
     formContainer.classList.add("form-container");
     content.appendChild(formContainer);
 
+    //creates img id for the form page//
+    let coffee = document.createElement("img");
+    coffee.id = "coffee";
+    coffee.setAttribute("src", "images/coffee.png");
+    formContainer.appendChild(coffee);
+
     // Create a form dynamically
     var form = document.createElement("form");
     form.setAttribute("method", "post");
@@ -45,8 +51,14 @@ function createMenu() {
     formRow1.appendChild(fullNameLabel)
 
     let fullNameInput = document.createElement("input");
+    fullNameInput.id = "full-name-input";
     // fullNameInput.setAttribute()
     fullNameLabel.appendChild(fullNameInput);
+
+    //creates span for error message if needed//
+    let fullNameSpan = document.createElement("span");
+    fullNameSpan.innerText = "";
+    fullNameInput.appendChild(fullNameSpan);
 
     let emailLabel = document.createElement("label");
     emailLabel.innerText = "Email"
@@ -54,8 +66,14 @@ function createMenu() {
 
     //create elements for formRow1//
     let emailInput = document.createElement("input");
+    emailInput.id = "email-input";
     // fullNameInput.setAttribute()
     emailLabel.appendChild(emailInput);
+
+    //creates span for error message if needed//
+    let emailSpan = document.createElement("span");
+    emailSpan.innerText = "";
+    emailInput.appendChild(emailSpan);
 
     //creates a class div for the form-row2 content//
     let formRow2 = document.createElement("div");
@@ -67,14 +85,24 @@ function createMenu() {
     formRow2.appendChild(phoneLabel)
 
     let phoneInput = document.createElement("input");
+    phoneInput.id = "phone-input";
     phoneLabel.appendChild(phoneInput);
+
+    let phoneSpan = document.createElement("span");
+    phoneSpan.innerText = "";
+    phoneInput.appendChild(phoneSpan);
 
     let zipCodeLabel = document.createElement("label");
     zipCodeLabel.innerText = "Zip Code"
     formRow2.appendChild(zipCodeLabel)
 
     let zipCodeInput = document.createElement("input");
+    zipCodeInput.id = "zip-code-input";
     zipCodeLabel.appendChild(zipCodeInput);
+
+    let zipCodeSpan = document.createElement("span");
+    zipCodeSpan.innerText = "";
+    zipCodeInput.appendChild(zipCodeSpan);
 
     //creates a class div for the form-row3 content//
     let formRow3 = document.createElement("div");
@@ -86,47 +114,80 @@ function createMenu() {
     formRow3.appendChild(passwordLabel)
 
     let passwordInput = document.createElement("input");
+    passwordInput.id = "password-input";
     passwordLabel.appendChild(passwordInput);
+
+    let passwordSpan = document.createElement("span");
+    passwordSpan.innerText = "";
+    passwordInput.appendChild(passwordSpan);
 
     let password2Label = document.createElement("label");
     password2Label.innerText = "Confirm Password"
     formRow3.appendChild(password2Label)
 
     let password2Input = document.createElement("input");
+    password2Input.id = "password2-input";
     password2Label.appendChild(password2Input);
+
+    let password2Span = document.createElement("span");
+    password2Span.innerText = "";
+    password2Input.appendChild(password2Span);
 
     //creates a class div for the form-row4 content//
     let formRow4 = document.createElement("div");
     formRow4.classList.add("form-row");
     form.appendChild(formRow4);
 
-    let signUpButtonLabel = document.createElement("label");
-    formRow4.appendChild(signUpButtonLabel);
-
     let signUpButtonInput = document.createElement("button");
     signUpButtonInput.id = "sign-up-button";
-    signUpButtonInput.innerText = "Sign Up!"
-    signUpButtonLabel.appendChild(signUpButtonInput);
+    signUpButtonInput.innerText = "Sign-Up!"
+    formRow4.appendChild(signUpButtonInput);
 
-    function passwordConfirmation() {
+    signUpButtonInput.addEventListener("blur", () => {
+        validateForm,
+        passwordConfirmation
+    });
 
-        let password = document.getElementById(passwordInput).value;
-        let confirmPassword = document.getElementById("password2").value;
-        
-        if (password == confirmPassword) {
-            document.getElementById("message").innerHTML = "**Success: Account Created!";
-            //return true; (When I want it to actually submit the form on a website)//
-        } else {
-            document.getElementById("message").innerHTML = "**Error: Passwords do not match.";
-        }
-        return false;
-    }
-    passwordConfirmation();
 }
 
+function validateForm() {
 
-//function to verify the passwords match//
+    let name = document.fullNameInput.value;
+    let email = document.emailInput.value;
+    let phone = document.phoneInput.value;
+    let zip = document.zipCodeInput.value;
+    let password = document.passwordInput.value;
+    let password2 = document.password2Input.value;
 
+    if (name === null || name === "") {
+        document.getElementById("full-name-input").innerText = "Please enter your name";
+    } else if (email !== "@" || email !== ".") {
+        document.getElementsByName("email-input").innerText = "Please enter a valid email address";
+    } else if (phone === null || phone === "") {
+        document.getElementsByName("phone-input").innerText = "Please enter a valid phone number";
+    } else if (zip === null || zip === "") {
+        document.getElementsByName("zip-code-input").innerText = "Please enter a valid zip code"
+    } else if (password === null || password === "") {
+        document.getElementsByName("password-input").innerText = "Please enter a valid password";
+    } else if (password2 === null || password2 === "") {
+        document.getElementsByName("password2-input").innerText = "Please enter a valid password";
+    } else {
+        return false;
+    }
+}
+
+function passwordConfirmation() {
+
+    if (passwordInput === password2Input) {
+        document.getElementById(password2Span).innerHTML = "**Success: Account Created!";
+        //return true; (When I want it to actually submit the form on a website)//
+    } else {
+        document.getElementById(password2Span).innerHTML = "Error: Passwords do not match.";
+    }
+    return false;
+}
+
+ 
 
 module.exports = {
     createMenu

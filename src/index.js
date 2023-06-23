@@ -14,3 +14,4 @@ document.querySelector("#menu").addEventListener("click", menu.createMenu);
 document.querySelector("#contact").addEventListener("click", contact.createMenu);
 
 document.querySelector("#sign-up").addEventListener("click", signUp.createMenu);
+

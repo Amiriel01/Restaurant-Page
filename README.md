@@ -62,3 +62,7 @@ Contact:
     a. Baker One: Sincerely Media
    
     b. Baker Two: Bank Phrom
+
+5. Sign-Up page image found on Unsplash.com
+
+   Creator: Diliara Garifullina
