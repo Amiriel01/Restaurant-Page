@@ -18,6 +18,9 @@ Contact:
 ![](dist/images/completed5.png)
 ![](dist/images/completed6.png)
 
+Sign-Up:
+
+
 ***Features***
 1. Home Page:
    
