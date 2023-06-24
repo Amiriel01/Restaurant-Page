@@ -19,22 +19,36 @@ Contact:
 ![](dist/images/completed6.png)
 
 Sign-Up:
-
+![](dist/images/completed7.png)
+![](dist/images/completed8.png)
+![](dist/images/completed9.png)
 
 ***Features***
 1. Home Page:
    
    a. The Home page features the bakery name with background image, two paragraphs of text about the resturant, the hours and location of the bakery.
    
-3. Menu Page:
+2. Menu Page:
    
    a. I used a function to create the menu cards instead of creating the cards one by one.
    
-5. Contact Page:
+3. Contact Page:
    
    a. The Contact Page features two fictional bakers and contact information for the store.
+
+4. Sign-Up Page:
+
+   a. The sign-up page features a form that has the inputs name, email, phone, zip code, password, and confirm password.
+
+   b. Each field will error as the user goes through the form if the form field is skipped.
+
+   c. The confirm password will error if the password and confirm password do not match.
+
+   d. When pushed, the sign-up button will alert the user if their form was submitted successfully (no inputs missing and passwords match) or if they need to make corrections.
    
-7. The tabs at the top work of a function that clears each page and then shows the new content.
+5. The tabs at the top work of a function that clears each page and then shows the new content.
+
+
 
 ***Credits***
 
