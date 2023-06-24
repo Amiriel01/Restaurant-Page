@@ -2,7 +2,7 @@
 
 **Objective**
 
-I created a three page restaurant website using JavaScript, HTML, JSON, Webpack, and CSS. The webpage is for a fictional restaurant and has a Home, Menu, and Contact page.
+I created a four page restaurant website using JavaScript, HTML, JSON, Webpack, and CSS. The webpage is for a fictional restaurant and has a Home, Menu, Contact, and Sign-Up page. All form validation is done using JavaScript. 
 
 ***Completed Website Images***
 
