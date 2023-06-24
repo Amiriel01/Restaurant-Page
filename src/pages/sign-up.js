@@ -81,7 +81,7 @@ function createMenu() {
 
     //creates span for error message if needed//
     let emailSpan = document.createElement("span");
-    fullNameSpan.id = "email-span";
+    emailSpan.id = "email-span";
     emailSpan.innerText = "";
     formItem2.appendChild(emailSpan);
 
@@ -103,7 +103,7 @@ function createMenu() {
     formItem3.appendChild(phoneInput);
 
     let phoneSpan = document.createElement("span");
-    fullNameSpan.id = "phone-span";
+    phoneSpan.id = "phone-span";
     phoneSpan.innerText = "";
     formItem3.appendChild(phoneSpan);
 
@@ -120,7 +120,7 @@ function createMenu() {
     formItem4.appendChild(zipCodeInput);
 
     let zipCodeSpan = document.createElement("span");
-    fullNameSpan.id = "zip-code-span";
+    zipCodeSpan.id = "zip-code-span";
     zipCodeSpan.innerText = "";
     formItem4.appendChild(zipCodeSpan);
 
@@ -142,7 +142,7 @@ function createMenu() {
     formItem5.appendChild(passwordInput);
 
     let passwordSpan = document.createElement("span");
-    fullNameSpan.id = "password-span";
+    passwordSpan.id = "password-span";
     passwordSpan.innerText = "";
     formItem5.appendChild(passwordSpan);
 
@@ -177,24 +177,29 @@ function createMenu() {
     emailInput.addEventListener("blur", validateEmail);
     phoneInput.addEventListener("blur", validatePhone);
     zipCodeInput.addEventListener("blur", validateZipCode);
-    password2Input.addEventListener("blur", validatePassword);
+    passwordInput.addEventListener("blur", validatePassword);
+    password2Input.addEventListener("blur", validatePassword2);
+    password2Input.addEventListener("blur", confirmPasswords);
     
     signUpButtonInput.addEventListener("click", () => {
-        // console.log();
         validateName();
         validateEmail();
         validatePhone();
         validateZipCode();
         validatePassword();
+        validatePassword2();
+        confirmPasswords();
         validateForm();
     });
     
 }
 
+
 function validateName() {
     let name = document.getElementById("full-name-input").value;
     if (!name) {
         document.getElementById("full-name-span").innerText = "Please enter your name";
+        // alert ("Please enter your name");
         return false;
     }
     return true;
@@ -203,10 +208,12 @@ function validateName() {
 
 function validateEmail() {
     let email = document.getElementById("email-input").value;
-    if (email.includes("@") && email.includes(".")) {
-        document.getElementsByName("email-span").innerText = "Please enter a valid email address";
+    
+    if (!email.includes("@") && !email.includes(".")) {
+        document.getElementById("email-span").innerText = "Please enter a valid email address";
         return false;
-    }
+   
+    } 
     return true;
 }
 
@@ -230,6 +237,24 @@ function validateZipCode() {
 
 function validatePassword() {
     let password = document.getElementById("password-input").value;
+    if (!password) {
+        document.getElementById("password-span").innerText = "Please enter a password";
+        return false;
+    }
+    return true;
+}
+
+function validatePassword2() {
+    let password2 = document.getElementById("password2-input").value;
+    if (!password2) {
+        document.getElementById("password2-span").innerText = "Please enter a password";
+        return false;
+    }
+    return true;
+}
+
+function confirmPasswords() {
+    let password = document.getElementById("password-input").value;
     let password2 = document.getElementById("password2-input").value;
 
     if (password === password2) {
@@ -240,13 +265,12 @@ function validatePassword() {
     }
 }
 
-
 function validateForm() {
 
-    if (validateName() && validateEmail() && validatePhone() && validateZipCode() && validatePassword()) {
+    if (validateName() && validateEmail() && validatePhone() && validateZipCode() && validatePassword() && validatePassword2() &&confirmPasswords()) {
         alert("Your form was submitted. Thank you!")
     } else
-        return false;
+        alert ("Please complete the form or correct the form errors.")
 }
 
 module.exports = {
