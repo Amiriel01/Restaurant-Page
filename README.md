@@ -44,7 +44,11 @@ Sign-Up:
 
    c. The confirm password will error if the password and confirm password do not match.
 
-   d. When pushed, the sign-up button will alert the user if their form was submitted successfully (no inputs missing and passwords match) or if they need to make corrections.
+   d. Each input field has a css valid/invalid styling. The valid styling shows the green border on the input box and the invalid will show the border the same color as the error message. The error and styling will revert back to valid once the form field is corrected.
+
+   e. When pushed, the sign-up button will alert the user if their form was submitted successfully (no inputs missing and passwords match) or if they need to make corrections.
+
+   
    
 5. The tabs at the top work of a function that clears each page and then shows the new content.
 
