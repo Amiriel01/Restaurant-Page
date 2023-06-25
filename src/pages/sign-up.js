@@ -199,7 +199,7 @@ function validateName() {
     let name = document.getElementById("full-name-input").value;
     if (!name) {
         document.getElementById("full-name-span").innerText = "Please enter your name";
-        // alert ("Please enter your name");
+        
         return false;
     }
     return true;
