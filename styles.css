@@ -361,7 +361,7 @@ input:valid {
 }
 
 input:invalid {
-    border: 1px solid purple;
+    border: 2px solid purple;
 }
 
 #sign-up-button {
