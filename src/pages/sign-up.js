@@ -35,7 +35,7 @@ function createMenu() {
     formContainer.appendChild(coffee);
 
     // Create a form dynamically
-    var form = document.createElement("form");
+    let form = document.createElement("form");
     //use if it was real//
     // form.setAttribute("method", "post");
     // form.setAttribute("action", "submit");
@@ -180,18 +180,13 @@ function createMenu() {
     passwordInput.addEventListener("blur", validatePassword);
     password2Input.addEventListener("blur", validatePassword2);
     password2Input.addEventListener("blur", confirmPasswords);
-    
-    signUpButtonInput.addEventListener("click", () => {
-        validateName();
-        validateEmail();
-        validatePhone();
-        validateZipCode();
-        validatePassword();
-        validatePassword2();
-        confirmPasswords();
-        validateForm();
+
+    form.addEventListener("submit", (e) => {
+        if (!validateForm()) {
+            e.preventDefault();
+        }
     });
-    
+
 }
 
 
@@ -199,58 +194,82 @@ function validateName() {
     let name = document.getElementById("full-name-input").value;
     if (!name) {
         document.getElementById("full-name-span").innerText = "Please enter your name";
-        
+        document.getElementById("full-name-input").setCustomValidity("invalid");
         return false;
+    } else {
+        document.getElementById("full-name-span").innerText = "";
+        document.getElementById("full-name-input").setCustomValidity("");
+        return true;
     }
-    return true;
 }
 
 
 function validateEmail() {
     let email = document.getElementById("email-input").value;
-    
+
     if (!email.includes("@") && !email.includes(".")) {
         document.getElementById("email-span").innerText = "Please enter a valid email address";
+        document.getElementById("email-input").setCustomValidity("invalid");
         return false;
-   
-    } 
-    return true;
+
+    } else {
+        document.getElementById("email-span").innerText = "";
+        document.getElementById("email-input").setCustomValidity("");
+        return true;
+    }
+    
 }
 
 function validatePhone() {
     let phone = document.getElementById("phone-input").value;
     if (!phone) {
         document.getElementById("phone-span").innerText = "Please enter a valid phone number";
+        document.getElementById("phone-input").setCustomValidity("invalid");
         return false;
+    } else {
+        document.getElementById("phone-span").innerText = "";
+        document.getElementById("phone-input").setCustomValidity("");
+        return true;
     }
-    return true;
 }
 
 function validateZipCode() {
     let zip = document.getElementById("zip-code-input").value;
     if (!zip) {
         document.getElementById("zip-code-span").innerText = "Please enter a valid zip code";
+        document.getElementById("zip-code-input").setCustomValidity("invalid");
         return false;
+    } else {
+        document.getElementById("zip-code-span").innerText = "";
+        document.getElementById("zip-code-input").setCustomValidity("");
+        return true;
     }
-    return true;
 }
 
 function validatePassword() {
     let password = document.getElementById("password-input").value;
     if (!password) {
         document.getElementById("password-span").innerText = "Please enter a password";
+        document.getElementById("password-input").setCustomValidity("invalid");
         return false;
+    } else {
+        document.getElementById("password-span").innerText = "";
+        document.getElementById("password-input").setCustomValidity("");
+        return true;
     }
-    return true;
 }
 
 function validatePassword2() {
     let password2 = document.getElementById("password2-input").value;
     if (!password2) {
         document.getElementById("password2-span").innerText = "Please enter a password";
+        document.getElementById("password2-input").setCustomValidity("invalid");
         return false;
+    } else {
+        document.getElementById("password2-span").innerText = "";
+        document.getElementById("password2-input").setCustomValidity("");
+        return true;
     }
-    return true;
 }
 
 function confirmPasswords() {
@@ -267,10 +286,13 @@ function confirmPasswords() {
 
 function validateForm() {
 
-    if (validateName() && validateEmail() && validatePhone() && validateZipCode() && validatePassword() && validatePassword2() &&confirmPasswords()) {
+    if (validateName() && validateEmail() && validatePhone() && validateZipCode() && validatePassword() && validatePassword2() && confirmPasswords()) {
         alert("Your form was submitted. Thank you!")
-    } else
-        alert ("Please complete the form or correct the form errors.")
+        return true;
+    } else {
+        alert("Please complete the form or correct the form errors.");
+        return false;
+    }
 }
 
 module.exports = {
